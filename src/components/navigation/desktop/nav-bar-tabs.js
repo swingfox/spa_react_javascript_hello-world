@@ -9,9 +9,9 @@ export const NavBarTabs = () => {
     <div className="nav-bar__tabs">
       <NavBarTab path="/profile" label="Profile" />
       <NavBarTab path="/public" label="Public" />
+      <NavBarTab path="/protected" label="Member Only Page" />
       {isAuthenticated && (
         <>
-          <NavBarTab path="/protected" label="Protected" />
           <NavBarTab path="/admin" label="Admin" />
         </>
       )}
