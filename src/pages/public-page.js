@@ -76,6 +76,17 @@ export const PublicPage = () => {
           <CodeSnippet title="User Info" code={userInfo} />
           <CodeSnippet title="Public Message" code={message} />
         </div>
+        { isAuthenticated &&
+          <>
+          {showItem ? (
+          <StripeContainer />
+            ) : (
+              <>
+                <button onClick={() => setShowItem(true)}>Purchase Subscription</button>
+              </>
+            )}
+          </>
+        }
       </div>
     </PageLayout>
   );
