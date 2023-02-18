@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
+import StripeContainer from '../components/forms/stripe-container';
+import "../styles/public-page.css"
 
 export const PublicPage = () => {
   const [message, setMessage] = useState("");
   const [userInfo, setUserInfo] = useState("");
-
+	const [showItem, setShowItem] = useState(false);
   const { isAuthenticated, user } = useAuth0();
 
 
@@ -82,7 +84,7 @@ export const PublicPage = () => {
           <StripeContainer />
             ) : (
               <>
-                <button onClick={() => setShowItem(true)}>Purchase Subscription</button>
+                <button className="button-purchase" onClick={() => setShowItem(true)}>Purchase Subscription</button>
               </>
             )}
           </>
