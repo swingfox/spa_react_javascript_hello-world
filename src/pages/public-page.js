@@ -17,7 +17,6 @@ export const PublicPage = () => {
     const getMessage = async () => {
       if (!isAuthenticated) {
         setUserInfo(JSON.stringify("Guest", null, 2));
-        return;
       } else {
         setUserInfo(JSON.stringify(user, null, 2));
       }
