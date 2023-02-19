@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: docker-react-auth-payment-app
+    image: docker-react-auth-payment-image
+    build:
+      context: .
+    ports:
+      - 4040:80
